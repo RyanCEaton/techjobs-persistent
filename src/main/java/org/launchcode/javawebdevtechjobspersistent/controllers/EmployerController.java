@@ -1,6 +1,7 @@
 package org.launchcode.javawebdevtechjobspersistent.controllers;
 
 import org.launchcode.javawebdevtechjobspersistent.dataRepos.EmployerRepository;
+import org.launchcode.javawebdevtechjobspersistent.dataRepos.JobRepository;
 import org.launchcode.javawebdevtechjobspersistent.models.Employer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,8 +29,6 @@ public class EmployerController {
     public String displayAddEmployerForm(Model model) {
         model.addAttribute("title", "Add Employer");
         model.addAttribute(new Employer());
-
-
         return "employers/add";
     }
 
