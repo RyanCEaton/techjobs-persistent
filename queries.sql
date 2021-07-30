@@ -9,4 +9,4 @@
 ## Part 3: Test it with SQL
     DROP TABLE job;
 ## Part 4: Test it with SQL
-    SELECT name, description FROM techjobs.skill LEFT JOIN techjobs.job_skills ON jobs_id = true ORDER BY name ASC;
+    SELECT name, description FROM techjobs.skill WHERE techjobs.skill.id IN (SELECT skills_id FROM techjobs.job_skills WHERE jobs_id IS NOT NULL) ORDER BY name ASC;
