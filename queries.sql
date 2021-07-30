@@ -9,3 +9,4 @@
 ## Part 3: Test it with SQL
     DROP TABLE job;
 ## Part 4: Test it with SQL
+    SELECT name, description FROM techjobs.skill LEFT JOIN techjobs.job_skills ON jobs_id = true ORDER BY name ASC;
